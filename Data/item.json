@@ -1,0 +1,42 @@
+[
+  {
+    "name": "pizza",
+    "price": 1700
+  },
+  {
+    "name": "Hamburger",
+    "price": 1900
+  },
+  {
+    "name": "Sandwich",
+    "price": 1200
+  },
+  {
+    "name": "Cheeseburger",
+    "price": 1800
+  },
+  {
+    "name": "Chicken & Chips",
+    "price": 2200
+  },
+  {
+    "name": "Milk Shakes",
+    "price": 1600
+  },
+  {
+    "name": "Burrito",
+    "price": 2200
+  },
+  {
+    "name": "Taco",
+    "price": 2400
+  },
+  {
+    "name": "Chocolate Chip Cookies",
+    "price": 2300
+  },
+  {
+    "name": "Dal Bhat",
+    "price": 2300
+  }
+]
