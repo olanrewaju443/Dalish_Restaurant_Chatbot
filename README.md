@@ -32,7 +32,7 @@ This is a chatbot for a restaurant that allows users to place an order order of 
 
 ### Getting Started
 
-Users initiate a chat session with the bot by visiting this [URL](https://restaurant-chatbot.onrender.com) or setting up a local server as instructed in the [setup section](#setup) of this documentation.  
+Users initiate a chat session with the bot by visiting this [URL](https://dalish-chatbot.onrender.com) or setting up a local server as instructed in the [setup section](#setup) of this documentation.  
 Upon connection, for first-time users the chatbot will ask to input username while for returning users it proceeds to a welcome message and a list of available options.
 
 
