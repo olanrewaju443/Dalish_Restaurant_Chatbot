@@ -42,11 +42,11 @@ To select an option, the user simply needs to type in the corresponding number a
 For example:
 
 - Select 1 to Place an order
-   - select 1: pizza #1700
+   - select 1: Sandwich #1200
      - how many pizza? [1 to 9]
        > pizza added to order
      - select 0 to cancel
-   - select 2: Chips #900
+   - select 2: Hamburger #1900
    - ....
    - select 0: cancel
    - select 99: more items
