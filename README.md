@@ -127,4 +127,4 @@ The server-side component of the chatbot is responsible for handling incoming re
 
 ---
 
-The Restaurant Chat-botis not intended for production use yet. Use at your own risk.
+The Restaurant Chat-bot is not intended for production use yet. Use at your own risk.
