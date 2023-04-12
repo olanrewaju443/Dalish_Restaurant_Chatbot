@@ -27,7 +27,7 @@ class NavigationTree {
         this.start = this.greeting.addChild("start", methods.start);
         this.cancelOrder = this.start.addChild(0, methods.cancelOrder);
         this.listItem = this.start.addChild(1, methods.listItem);
-        this.checkOut = this.start.addChild(99, methods.checkOut);
+        this.checkout = this.start.addChild(99, methods.checkout);
         this.orderHistory = this.start.addChild(98, methods.orderHistory);
         this.currentOrder = this.start.addChild(97, methods.currentOrder)
     }

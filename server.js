@@ -8,19 +8,47 @@ const io = new Server(server);
 require("dotenv").config();
 const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
+const expressWinston = require("express-winston");
 const logger = require("./logger/logger");
+
+const { transports, format } = require('winston')
 
 const store = new MongoDBStore({
   uri: process.env.MONGODB_URI,
   collection: "mySessions",
 });
 
+app.use(expressWinston.logger({
+  winstonInstance: logger,
+  statusLevels: true
+}))
+
+const myFormat = format.printf(({
+  level, meta, timestamp
+}) => {
+  return `${timestamp} ${level}: ${meta.message}`
+})
+
+app.use(expressWinston.logger({
+  transports: [
+    new transports.File({
+      filename: './logs/error.log', level: 'error',
+      filename: './logs/combined.log'
+    })
+  ],
+  format: format.combine(
+    format.json(),
+    format.timestamp(),
+    myFormat
+  )
+}))
+
 const sessionMiddleware = session({
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true,
   store: store,
-  cookie: { maxAge: 24 * 60 * 60 * 1000 * 14 },
+  cookie: { maxAge: 24 * 60 * 60 * 1000 * 5 },
 });
 
 app.use(sessionMiddleware);
@@ -92,7 +120,7 @@ io.on("connection", (socket) => {
           delete socketRoom[session.id];
           console.log("sessionData deleted");
         }
-      }, 5000);
+      }, 10000);
     }
   });
 });

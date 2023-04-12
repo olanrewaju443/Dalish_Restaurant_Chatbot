@@ -138,10 +138,10 @@ function listItem(sessionData) {
 }
 
 function itemSelect() {
-  for (let i = 1; i <= 9; i++) {
+  for (let i = 1; i <= 10; i++) {
     this.addChild(i, PlaceOrder, this.item);
   }
-  let message = [`how many ${this.item.name}? [1 to 9]`];
+  let message = [`how many ${this.item.name}? [1 to 10]`];
   this.addChild(0, cancel);
   message.push(`select 0 to cancel`);
   return message.join("\n");
